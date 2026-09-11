@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mango Royal PH | Premium Mango Goodness</title>
+    <title>Mango Royal Milkshake</title>
     <!-- Tailwind CSS (Using CDN for preview purposes) -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -11,13 +11,15 @@
             theme: {
                 extend: {
                     colors: {
-                        mango: {
-                            500: '#F5B041', // Royal Mango Yellow
-                            600: '#D68910',
+                        royalred: {
+                            500: '#cc0000',
+                            600: '#a80000',
+                            700: '#850000',
                         },
-                        leaf: {
-                            500: '#27AE60', // Mango Leaf Green
-                            600: '#1E8449',
+                        royalyellow: {
+                            400: '#fcd34d',
+                            500: '#f1b500', 
+                            600: '#d9a300',
                         }
                     }
                 }
@@ -25,7 +27,7 @@
         }
     </script>
 </head>
-<body class="font-sans antialiased text-gray-800 bg-gray-50">
+<body class="font-sans antialiased text-gray-800 bg-gray-50 scroll-smooth">
     
     <x-navbar />
 
