@@ -2,7 +2,6 @@
 
 @php
     $baseClasses = 'inline-block px-8 py-3 rounded-full font-bold transition-colors duration-300 text-center';
-    
     $typeClasses = match($type) {
         'primary' => 'bg-royalyellow-500 text-white hover:bg-royalyellow-600 shadow-md',
         'secondary' => 'bg-white text-royalred-500 border-2 border-royalred-500 hover:bg-red-50',
