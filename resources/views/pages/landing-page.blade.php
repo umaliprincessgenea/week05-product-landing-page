@@ -12,7 +12,7 @@
 
         <div class="relative z-10 w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
             
-            <!-- Large Top Banner Carousel (Removed box styling: no shadows, no rounded corners) -->
+            <!-- Large Top Banner Carousel -->
             <div id="mango-carousel" class="relative w-full h-[400px] md:h-[550px] lg:h-[650px] mb-12 overflow-hidden group">
                 
                 <!-- Carousel Track -->
@@ -72,7 +72,7 @@
                 </div>
             </div>
 
-            <!-- Centered Text Content (Removed card styling) -->
+            <!-- Centered Text Content -->
             <div class="space-y-4 max-w-4xl mx-auto px-4">
                 <span class="text-yellow-600 font-extrabold uppercase tracking-widest text-sm drop-shadow-sm">Premium Philippine Mangoes!</span>
                 <h1 class="text-4xl md:text-5xl lg:text-6xl font-black text-gray-900 leading-tight">
@@ -200,49 +200,331 @@
         </div>
     </section>
 
-    <!-- 4. Product Showcase -->
-    <section id="showcase" class="py-20 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-                <!-- Mobile / App View Mockup -->
-                <div class="relative flex justify-center">
-                    <div class="bg-gray-800 rounded-[3rem] p-4 w-64 md:w-80 shadow-2xl border-4 border-gray-900">
-                        <div class="bg-white rounded-[2rem] h-[500px] overflow-hidden flex flex-col">
-                            <div class="bg-red-600 p-4 text-white text-center font-bold">MangoRoyal App</div>
-                            <div class="p-4 space-y-4">
-                                <div class="bg-gray-200 h-32 rounded-xl"></div>
-                                <div class="h-4 bg-gray-200 rounded w-3/4"></div>
-                                <div class="h-4 bg-gray-200 rounded w-1/2"></div>
-                                <div class="bg-yellow-500 p-3 rounded-lg text-white text-sm font-bold text-center mt-4 cursor-pointer hover:bg-yellow-600">Place Order</div>
-                            </div>
-                        </div>
+    <!-- 4. Interactive Playing Cards Product Showcase Section -->
+    <section id="showcase" class="py-24 bg-gradient-to-b from-gray-900 via-amber-950 to-gray-900 text-white overflow-hidden relative">
+        
+        <!-- Subtle Ambient Background Glow -->
+        <div class="absolute inset-0 pointer-events-none opacity-30">
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-r from-red-600 to-yellow-500 rounded-full blur-[140px]"></div>
+        </div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            
+            <span class="text-yellow-400 font-bold uppercase tracking-widest text-sm mb-2 block">Interactive Collection</span>
+            <h2 class="text-4xl md:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 via-amber-200 to-red-400 mb-4">
+                Pick Your Royal Flavor
+            </h2>
+            <p class="text-gray-300 max-w-xl mx-auto mb-16 text-base font-medium">
+                Tap any card to bring it to the front deck. Discover our premium line of fresh handcrafted mango creations.
+            </p>
+
+            <!-- Card Stack Container -->
+            <div id="playing-cards-container" class="relative w-full h-[520px] md:h-[560px] flex justify-center items-center select-none perspective-1000">
+                
+                <!-- Product Card 1: Mango Royal -->
+                <div class="product-card absolute w-[270px] sm:w-[300px] h-[440px] md:h-[470px] rounded-3xl p-5 border-2 border-yellow-400/80 bg-gradient-to-b from-amber-900/90 via-gray-900/95 to-black shadow-2xl backdrop-blur-md cursor-pointer transition-all duration-500 ease-out flex flex-col justify-between group overflow-hidden" data-index="0">
+                    <div class="absolute inset-0 bg-gradient-to-tr from-yellow-500/10 via-transparent to-red-500/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    
+                    <div class="flex justify-between items-center text-xs font-bold text-yellow-400 tracking-wider uppercase relative z-10">
+                        <span class="flex items-center gap-1"><span class="text-base">👑</span> Signature</span>
+                        <span>01 / 10</span>
                     </div>
+
+                    <div class="w-full h-56 rounded-2xl overflow-hidden border border-yellow-500/30 shadow-md my-3 relative z-10">
+                        <img src="{{ asset('assets/mango-royal.jpg') }}" alt="Mango Royal" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+
+                    <div class="text-left relative z-10">
+                        <h3 class="text-xl font-black text-white tracking-wide">Mango Royal</h3>
+                        <p class="text-xs text-gray-300 mt-1 line-clamp-2">Our flagship blend featuring 100% pure Guimaras mangoes and rich whipped cream.</p>
+                    </div>
+
+                    <button class="w-full py-2.5 bg-gradient-to-r from-yellow-500 to-amber-600 hover:from-yellow-400 hover:to-amber-500 text-gray-950 font-extrabold rounded-xl shadow-lg transition-all relative z-10 border border-yellow-300/40 text-sm">
+                        Place Order • ₱180
+                    </button>
                 </div>
 
-                <!-- Product Details -->
-                <div>
-                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Manage Orders Seamlessly</h2>
-                    <p class="text-lg text-gray-600 mb-8">Whether you are ordering a single box for home or bulk purees for your restaurant, our online dashboard and mobile app make it incredibly easy.</p>
-                    
-                    <ul class="space-y-6">
-                        <li class="flex">
-                            <div class="flex-shrink-0 bg-red-100 rounded-lg p-3 text-red-600 text-2xl">📱</div>
-                            <div class="ml-4">
-                                <h4 class="text-xl font-bold text-gray-900">Mobile Ordering View</h4>
-                                <p class="text-gray-600 mt-1">Order fresh mangoes directly from your phone in 3 taps.</p>
-                            </div>
-                        </li>
-                        <li class="flex">
-                            <div class="flex-shrink-0 bg-red-100 rounded-lg p-3 text-red-600 text-2xl">💻</div>
-                            <div class="ml-4">
-                                <h4 class="text-xl font-bold text-gray-900">B2B Dashboard Preview</h4>
-                                <p class="text-gray-600 mt-1">Track wholesale orders, recurring deliveries, and invoices.</p>
-                            </div>
-                        </li>
-                    </ul>
+                <!-- Product Card 2: Mango Strawberry -->
+                <div class="product-card absolute w-[270px] sm:w-[300px] h-[440px] md:h-[470px] rounded-3xl p-5 border-2 border-red-500/60 bg-gradient-to-b from-red-950/90 via-gray-900/95 to-black shadow-2xl backdrop-blur-md cursor-pointer transition-all duration-500 ease-out flex flex-col justify-between group overflow-hidden" data-index="1">
+                    <div class="absolute inset-0 bg-gradient-to-tr from-red-500/10 via-transparent to-yellow-500/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+
+                    <div class="flex justify-between items-center text-xs font-bold text-red-400 tracking-wider uppercase relative z-10">
+                        <span class="flex items-center gap-1"><span class="text-base">🍓</span> Fruity Blend</span>
+                        <span>02 / 10</span>
+                    </div>
+
+                    <div class="w-full h-56 rounded-2xl overflow-hidden border border-red-500/30 shadow-md my-3 relative z-10">
+                        <img src="{{ asset('assets/mango-strawberry.jpg') }}" alt="Mango Strawberry" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+
+                    <div class="text-left relative z-10">
+                        <h3 class="text-xl font-black text-white tracking-wide">Mango Strawberry</h3>
+                        <p class="text-xs text-gray-300 mt-1 line-clamp-2">Sweet golden mangoes layered with tart Baguio strawberry preserves.</p>
+                    </div>
+
+                    <button class="w-full py-2.5 bg-gradient-to-r from-red-600 to-amber-600 hover:from-red-500 hover:to-amber-500 text-white font-extrabold rounded-xl shadow-lg transition-all relative z-10 border border-red-400/40 text-sm">
+                        Place Order • ₱160
+                    </button>
                 </div>
+
+                <!-- Product Card 3: Mango Graham -->
+                <div class="product-card absolute w-[270px] sm:w-[300px] h-[440px] md:h-[470px] rounded-3xl p-5 border-2 border-amber-500/60 bg-gradient-to-b from-amber-950/90 via-gray-900/95 to-black shadow-2xl backdrop-blur-md cursor-pointer transition-all duration-500 ease-out flex flex-col justify-between group overflow-hidden" data-index="2">
+                    <div class="absolute inset-0 bg-gradient-to-tr from-amber-500/10 via-transparent to-yellow-500/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+
+                    <div class="flex justify-between items-center text-xs font-bold text-amber-400 tracking-wider uppercase relative z-10">
+                        <span class="flex items-center gap-1"><span class="text-base">🥐</span> Bestseller</span>
+                        <span>03 / 10</span>
+                    </div>
+
+                    <div class="w-full h-56 rounded-2xl overflow-hidden border border-amber-500/30 shadow-md my-3 relative z-10">
+                        <img src="{{ asset('assets/mango-graham.jpg') }}" alt="Mango Graham" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+
+                    <div class="text-left relative z-10">
+                        <h3 class="text-xl font-black text-white tracking-wide">Mango Graham</h3>
+                        <p class="text-xs text-gray-300 mt-1 line-clamp-2">Classic Filipino favorite with crushed honey graham layers and condensed cream.</p>
+                    </div>
+
+                    <button class="w-full py-2.5 bg-gradient-to-r from-amber-500 to-yellow-600 hover:from-amber-400 hover:to-yellow-500 text-gray-950 font-extrabold rounded-xl shadow-lg transition-all relative z-10 border border-amber-300/40 text-sm">
+                        Place Order • ₱150
+                    </button>
+                </div>
+
+                <!-- Product Card 4: Mango Cheesecake -->
+                <div class="product-card absolute w-[270px] sm:w-[300px] h-[440px] md:h-[470px] rounded-3xl p-5 border-2 border-yellow-500/60 bg-gradient-to-b from-yellow-950/90 via-gray-900/95 to-black shadow-2xl backdrop-blur-md cursor-pointer transition-all duration-500 ease-out flex flex-col justify-between group overflow-hidden" data-index="3">
+                    <div class="absolute inset-0 bg-gradient-to-tr from-yellow-500/10 via-transparent to-amber-500/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+
+                    <div class="flex justify-between items-center text-xs font-bold text-yellow-300 tracking-wider uppercase relative z-10">
+                        <span class="flex items-center gap-1"><span class="text-base">🧀</span> Decadent</span>
+                        <span>04 / 10</span>
+                    </div>
+
+                    <div class="w-full h-56 rounded-2xl overflow-hidden border border-yellow-500/30 shadow-md my-3 relative z-10">
+                        <img src="{{ asset('assets/mango-cheesecake.jpg') }}" alt="Mango Cheesecake" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+
+                    <div class="text-left relative z-10">
+                        <h3 class="text-xl font-black text-white tracking-wide">Mango Cheesecake</h3>
+                        <p class="text-xs text-gray-300 mt-1 line-clamp-2">Creamy New York style cheesecake bits swirled with sweet ripe mango nectar.</p>
+                    </div>
+
+                    <button class="w-full py-2.5 bg-gradient-to-r from-yellow-500 to-amber-600 hover:from-yellow-400 hover:to-amber-500 text-gray-950 font-extrabold rounded-xl shadow-lg transition-all relative z-10 border border-yellow-300/40 text-sm">
+                        Place Order • ₱170
+                    </button>
+                </div>
+
+                <!-- Product Card 5: Mango Oreo -->
+                <div class="product-card absolute w-[270px] sm:w-[300px] h-[440px] md:h-[470px] rounded-3xl p-5 border-2 border-gray-600 bg-gradient-to-b from-gray-800/90 via-gray-900/95 to-black shadow-2xl backdrop-blur-md cursor-pointer transition-all duration-500 ease-out flex flex-col justify-between group overflow-hidden" data-index="4">
+                    <div class="absolute inset-0 bg-gradient-to-tr from-gray-500/10 via-transparent to-yellow-500/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+
+                    <div class="flex justify-between items-center text-xs font-bold text-gray-300 tracking-wider uppercase relative z-10">
+                        <span class="flex items-center gap-1"><span class="text-base">🍪</span> Crunchy Twist</span>
+                        <span>05 / 10</span>
+                    </div>
+
+                    <div class="w-full h-56 rounded-2xl overflow-hidden border border-gray-600 shadow-md my-3 relative z-10">
+                        <img src="{{ asset('assets/mango-oreo.jpg') }}" alt="Mango Oreo" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+
+                    <div class="text-left relative z-10">
+                        <h3 class="text-xl font-black text-white tracking-wide">Mango Oreo</h3>
+                        <p class="text-xs text-gray-300 mt-1 line-clamp-2">Rich chocolate cookie crumbles combined with smooth tropical mango smoothie.</p>
+                    </div>
+
+                    <button class="w-full py-2.5 bg-gradient-to-r from-yellow-500 to-amber-600 hover:from-yellow-400 hover:to-amber-500 text-gray-950 font-extrabold rounded-xl shadow-lg transition-all relative z-10 border border-yellow-300/40 text-sm">
+                        Place Order • ₱160
+                    </button>
+                </div>
+
+                <!-- Product Card 6: Mango Banana -->
+                <div class="product-card absolute w-[270px] sm:w-[300px] h-[440px] md:h-[470px] rounded-3xl p-5 border-2 border-yellow-400/60 bg-gradient-to-b from-yellow-900/90 via-gray-900/95 to-black shadow-2xl backdrop-blur-md cursor-pointer transition-all duration-500 ease-out flex flex-col justify-between group overflow-hidden" data-index="5">
+                    <div class="flex justify-between items-center text-xs font-bold text-yellow-300 tracking-wider uppercase relative z-10">
+                        <span class="flex items-center gap-1"><span class="text-base">🍌</span> Energy Boost</span>
+                        <span>06 / 10</span>
+                    </div>
+
+                    <div class="w-full h-56 rounded-2xl overflow-hidden border border-yellow-500/30 shadow-md my-3 relative z-10">
+                        <img src="{{ asset('assets/mango-banana.png') }}" alt="Mango Banana" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+
+                    <div class="text-left relative z-10">
+                        <h3 class="text-xl font-black text-white tracking-wide">Mango Banana</h3>
+                        <p class="text-xs text-gray-300 mt-1 line-clamp-2">Potassium-packed blending of ripe Cavendish bananas and sweet mango puree.</p>
+                    </div>
+
+                    <button class="w-full py-2.5 bg-gradient-to-r from-yellow-500 to-amber-600 hover:from-yellow-400 hover:to-amber-500 text-gray-950 font-extrabold rounded-xl shadow-lg transition-all relative z-10 border border-yellow-300/40 text-sm">
+                        Place Order • ₱140
+                    </button>
+                </div>
+
+                <!-- Product Card 7: Mango Chocochips -->
+                <div class="product-card absolute w-[270px] sm:w-[300px] h-[440px] md:h-[470px] rounded-3xl p-5 border-2 border-amber-700/70 bg-gradient-to-b from-amber-950/90 via-gray-900/95 to-black shadow-2xl backdrop-blur-md cursor-pointer transition-all duration-500 ease-out flex flex-col justify-between group overflow-hidden" data-index="6">
+                    <div class="flex justify-between items-center text-xs font-bold text-amber-500 tracking-wider uppercase relative z-10">
+                        <span class="flex items-center gap-1"><span class="text-base">🍫</span> Chocolate Fusion</span>
+                        <span>07 / 10</span>
+                    </div>
+
+                    <div class="w-full h-56 rounded-2xl overflow-hidden border border-amber-700/40 shadow-md my-3 relative z-10">
+                        <img src="{{ asset('assets/mango-chocochips.jpg') }}" alt="Mango Chocochips" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+
+                    <div class="text-left relative z-10">
+                        <h3 class="text-xl font-black text-white tracking-wide">Mango Chocochips</h3>
+                        <p class="text-xs text-gray-300 mt-1 line-clamp-2">Bittersweet dark chocolate chips mixed into refreshing crushed mango ice.</p>
+                    </div>
+
+                    <button class="w-full py-2.5 bg-gradient-to-r from-yellow-500 to-amber-600 hover:from-yellow-400 hover:to-amber-500 text-gray-950 font-extrabold rounded-xl shadow-lg transition-all relative z-10 border border-yellow-300/40 text-sm">
+                        Place Order • ₱155
+                    </button>
+                </div>
+
+                <!-- Product Card 8: Mango Juice -->
+                <div class="product-card absolute w-[270px] sm:w-[300px] h-[440px] md:h-[470px] rounded-3xl p-5 border-2 border-amber-400/60 bg-gradient-to-b from-amber-900/80 via-gray-900/95 to-black shadow-2xl backdrop-blur-md cursor-pointer transition-all duration-500 ease-out flex flex-col justify-between group overflow-hidden" data-index="7">
+                    <div class="flex justify-between items-center text-xs font-bold text-amber-300 tracking-wider uppercase relative z-10">
+                        <span class="flex items-center gap-1"><span class="text-base">🧃</span> Pure Refreshment</span>
+                        <span>08 / 10</span>
+                    </div>
+
+                    <div class="w-full h-56 rounded-2xl overflow-hidden border border-amber-400/30 shadow-md my-3 relative z-10">
+                        <img src="{{ asset('assets/mango-juice.jpg') }}" alt="Mango Juice" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+
+                    <div class="text-left relative z-10">
+                        <h3 class="text-xl font-black text-white tracking-wide">Mango Juice</h3>
+                        <p class="text-xs text-gray-300 mt-1 line-clamp-2">Cold-pressed 100% natural mango nectar with zero added sugars.</p>
+                    </div>
+
+                    <button class="w-full py-2.5 bg-gradient-to-r from-yellow-500 to-amber-600 hover:from-yellow-400 hover:to-amber-500 text-gray-950 font-extrabold rounded-xl shadow-lg transition-all relative z-10 border border-yellow-300/40 text-sm">
+                        Place Order • ₱110
+                    </button>
+                </div>
+
+                <!-- Product Card 9: Mango Mix -->
+                <div class="product-card absolute w-[270px] sm:w-[300px] h-[440px] md:h-[470px] rounded-3xl p-5 border-2 border-orange-500/60 bg-gradient-to-b from-orange-950/90 via-gray-900/95 to-black shadow-2xl backdrop-blur-md cursor-pointer transition-all duration-500 ease-out flex flex-col justify-between group overflow-hidden" data-index="8">
+                    <div class="flex justify-between items-center text-xs font-bold text-orange-400 tracking-wider uppercase relative z-10">
+                        <span class="flex items-center gap-1"><span class="text-base">🍧</span> Special Medley</span>
+                        <span>09 / 10</span>
+                    </div>
+
+                    <div class="w-full h-56 rounded-2xl overflow-hidden border border-orange-500/30 shadow-md my-3 relative z-10">
+                        <img src="{{ asset('assets/mango-mix.jpg') }}" alt="Mango Mix" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+
+                    <div class="text-left relative z-10">
+                        <h3 class="text-xl font-black text-white tracking-wide">Mango Mix</h3>
+                        <p class="text-xs text-gray-300 mt-1 line-clamp-2">Assorted tropical fruit jellies paired with rich mango syrup and coconut milk.</p>
+                    </div>
+
+                    <button class="w-full py-2.5 bg-gradient-to-r from-yellow-500 to-amber-600 hover:from-yellow-400 hover:to-amber-500 text-gray-950 font-extrabold rounded-xl shadow-lg transition-all relative z-10 border border-yellow-300/40 text-sm">
+                        Place Order • ₱145
+                    </button>
+                </div>
+
+                <!-- Product Card 10: Mango Plain -->
+                <div class="product-card absolute w-[270px] sm:w-[300px] h-[440px] md:h-[470px] rounded-3xl p-5 border-2 border-yellow-500/60 bg-gradient-to-b from-yellow-950/80 via-gray-900/95 to-black shadow-2xl backdrop-blur-md cursor-pointer transition-all duration-500 ease-out flex flex-col justify-between group overflow-hidden" data-index="9">
+                    <div class="flex justify-between items-center text-xs font-bold text-yellow-400 tracking-wider uppercase relative z-10">
+                        <span class="flex items-center gap-1"><span class="text-base">🥭</span> Pure Classic</span>
+                        <span>10 / 10</span>
+                    </div>
+
+                    <div class="w-full h-56 rounded-2xl overflow-hidden border border-yellow-500/30 shadow-md my-3 relative z-10">
+                        <img src="{{ asset('assets/mango-plain.jpg') }}" alt="Mango Plain" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+
+                    <div class="text-left relative z-10">
+                        <h3 class="text-xl font-black text-white tracking-wide">Mango Plain</h3>
+                        <p class="text-xs text-gray-300 mt-1 line-clamp-2">Unadulterated, smooth blended fresh mangoes served over crushed ice.</p>
+                    </div>
+
+                    <button class="w-full py-2.5 bg-gradient-to-r from-yellow-500 to-amber-600 hover:from-yellow-400 hover:to-amber-500 text-gray-950 font-extrabold rounded-xl shadow-lg transition-all relative z-10 border border-yellow-300/40 text-sm">
+                        Place Order • ₱120
+                    </button>
+                </div>
+
             </div>
+
+            <!-- Controls for Playing Cards -->
+            <div class="flex justify-center items-center gap-6 mt-8 relative z-20">
+                <button id="cardPrev" class="w-12 h-12 bg-gray-800/80 border border-gray-700 hover:border-yellow-400 text-yellow-400 rounded-full flex items-center justify-center transition shadow-lg hover:scale-110">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"></path></svg>
+                </button>
+
+                <div id="cardCounter" class="text-sm font-bold text-yellow-400 tracking-widest bg-black/40 px-4 py-2 rounded-full border border-yellow-500/30">
+                    1 / 10
+                </div>
+
+                <button id="cardNext" class="w-12 h-12 bg-gray-800/80 border border-gray-700 hover:border-yellow-400 text-yellow-400 rounded-full flex items-center justify-center transition shadow-lg hover:scale-110">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"></path></svg>
+                </button>
+            </div>
+
         </div>
+
+        <!-- Interactive Deck JS Script -->
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const cardNodes = document.querySelectorAll('.product-card');
+                const prevBtn = document.getElementById('cardPrev');
+                const nextBtn = document.getElementById('cardNext');
+                const counter = document.getElementById('cardCounter');
+                
+                let activeIndex = 0; // Starts with Mango Royal in front
+                const total = cardNodes.length;
+
+                function updateCardPositions() {
+                    const isMobile = window.innerWidth < 640;
+                    const spacing = isMobile ? 65 : 110;
+
+                    cardNodes.forEach((card, i) => {
+                        const offset = i - activeIndex;
+                        const absOffset = Math.abs(offset);
+
+                        const translateX = offset * spacing;
+                        const scale = 1 - absOffset * 0.08;
+                        const rotate = offset * 4;
+                        const zIndex = 50 - absOffset;
+                        const opacity = absOffset > 3 ? 0 : 1 - absOffset * 0.22;
+                        const pointerEvents = absOffset > 3 ? 'none' : 'auto';
+
+                        card.style.transform = `translateX(${translateX}px) scale(${Math.max(scale, 0.6)}) rotate(${rotate}deg)`;
+                        card.style.zIndex = zIndex;
+                        card.style.opacity = opacity;
+                        card.style.pointerEvents = pointerEvents;
+
+                        // Active card glow and focus styling
+                        if (offset === 0) {
+                            card.classList.add('ring-4', 'ring-yellow-400/80', 'shadow-[0_0_35px_rgba(234,179,8,0.4)]');
+                            card.classList.remove('brightness-75');
+                        } else {
+                            card.classList.remove('ring-4', 'ring-yellow-400/80', 'shadow-[0_0_35px_rgba(234,179,8,0.4)]');
+                            card.classList.add('brightness-75');
+                        }
+                    });
+
+                    counter.innerText = `${activeIndex + 1} / ${total}`;
+                }
+
+                cardNodes.forEach((card, index) => {
+                    card.addEventListener('click', () => {
+                        activeIndex = index;
+                        updateCardPositions();
+                    });
+                });
+
+                prevBtn.addEventListener('click', () => {
+                    activeIndex = (activeIndex - 1 + total) % total;
+                    updateCardPositions();
+                });
+
+                nextBtn.addEventListener('click', () => {
+                    activeIndex = (activeIndex + 1) % total;
+                    updateCardPositions();
+                });
+
+                window.addEventListener('resize', updateCardPositions);
+                updateCardPositions();
+            });
+        </script>
     </section>
 
     <!-- 5. Pricing Section -->
