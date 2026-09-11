@@ -1,58 +1,99 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# 1. Project Title
+Responsive Product Landing Page: mangoroyal.ph
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## 2. Introduction
 
-## About Laravel
+*   **What is a Product Landing Page?** A landing page is one of the most valuable digital assets for businesses, serving as the very first impression of a product or service.
+*   **Why Landing Pages are Important:** They play a critical role in attracting customers, increasing engagement, and significantly improving conversion rates. 
+*   **Purpose of the Project:** The goal is to design and develop a modern landing page for a real business (mangoroyal.ph) using Laravel, Blade Components, and Tailwind CSS. This transforms the business's information and brand identity into a clean, professional, and responsive platform to help it present itself better online.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## 3. Objectives
+During this laboratory activity, the following learning objectives were accomplished:
+*   Develop responsive web interfaces using Tailwind CSS.
+*   Create reusable Blade Components to eliminate duplicated code.
+*   Apply responsive design principles for desktop, tablet, and mobile devices.
+*   Organize frontend components following Laravel best practices.
+*   Implement consistent UI design using typography, spacing, colors, and layouts.
+*   Document frontend architecture and reusable component design.
+*   Publish a professional portfolio project through GitHub and LinkedIn.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## 4. Responsive Web Design
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+*   **Mobile-First Design:** Designing for smaller screens first ensures that the core content is prioritized before scaling up and adding complexities for larger displays.
+*   **Responsive Breakpoints:** Utilizing specific screen widths (like `md:`, `lg:`) to adjust layouts so the application looks great on all devices, from mobile phones to desktop monitors.
+*   **Flexbox:** A one-dimensional layout model used extensively to align items within the navigation bar and feature cards, ensuring dynamic spacing.
+*   **CSS Grid:** A two-dimensional layout system used to create the responsive pricing tier and feature grids, adapting seamlessly across different screen sizes.
+*   **User Experience (UX):** A well-structured responsive design ensures that users can intuitively navigate the page and find information effortlessly, regardless of their device.
 
-## Learning Laravel
+**Importance in Modern Web Applications:** Responsive design is crucial because users access websites from a vast array of devices. A responsive layout guarantees that the site remains readable, accessible, and visually appealing, preventing user frustration and drop-off.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## 5. Tailwind CSS
 
-In addition, [Laracasts](https://laracasts.com) contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+*   **Utility-First CSS:** Instead of writing custom CSS classes, Tailwind uses low-level utility classes (e.g., `flex`, `pt-4`, `text-center`) directly in the HTML to build designs.
+*   **Advantages of Tailwind CSS:** It enables developers to rapidly create professional and responsive designs without leaving the HTML file, ensuring a highly maintainable workflow.
+*   **Responsive Utility Classes:** Tailwind makes media queries simple by prefixing utilities (e.g., `md:w-1/2` forces a column to take up half the width only on medium screens and larger).
+*   **Component Styling:** By combining utility classes within Laravel Blade components, we create reusable, beautifully styled elements without cluttering stylesheets.
 
-You can also watch bite-sized lessons with real-world projects on [Laravel Learn](https://laravel.com/learn), where you will be guided through building a Laravel application from scratch while learning PHP fundamentals.
-
-## Agentic Development
-
-Laravel's predictable structure and conventions make it ideal for AI coding agents like Claude Code, Cursor, and GitHub Copilot. Install [Laravel Boost](https://laravel.com/docs/ai) to supercharge your AI workflow:
-
-```bash
-composer require laravel/boost --dev
-
-php artisan boost:install
+**Example from Project:**
+```html
+<div class="flex flex-col md:flex-row items-center justify-between p-6 bg-yellow-50 rounded-xl shadow-md">
+    <h2 class="text-2xl font-bold text-gray-800">Mangoroyal Premium</h2>
+    <button class="mt-4 md:mt-0 bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded-lg">Order Now</button>
+</div>
 ```
 
-Boost provides your agent 15+ tools and skills that help agents build Laravel applications while following best practices.
+## 6. Blade Components
 
-## Contributing
+*   **What are Blade Components?** They are reusable pieces of UI built using Laravel's templating engine that encapsulate both logic and markup.
+*   **Why they improve maintainability:** Modern Laravel applications use Blade Components to build modular interfaces, eliminating duplicated HTML code across multiple pages.
+*   **Benefits of modular UI development:** It creates a clean user interface architecture. If a button's style needs to change, it only has to be updated in one component file, reflecting globally across the site.
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+**Sample Code Snippet (resources/views/components/button.blade.php):**
+```html
+<button class="bg-yellow-500 hover:bg-yellow-600 text-white font-semibold py-2 px-6 rounded-lg transition ease-in-out duration-300">
+    {{ $slot }}
+</button>
+```
 
-## Code of Conduct
+## 7. User Interface Design
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+*   **Color Palette:** A limited and harmonious color palette emphasizing warm mango tones (golden yellows and soft oranges) paired with clean whites and dark gray text to ensure sufficient color contrast for accessibility.
+*   **Typography:** Consistent spacing and typography using a modern sans-serif font family to guarantee readability.
+*   **Iconography:** Minimalist icons used in the features section to quickly convey product benefits visually.
+*   **Button Styles:** Rounded corners with hover effects to provide tactile feedback and indicate interactivity.
+*   **Card Design:** Used for pricing and testimonials, featuring subtle shadows and rounded borders to separate content logically.
+*   **Layout Consistency:** Achieved through uniform spacing utilities across all sections.
 
-## Security Vulnerabilities
+**Contribution to UX:** These principles build a modern design system that guides the user's eye naturally down the page, establishes trust, and makes calls-to-action obvious and inviting.
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+## 8. Folder Structure
 
-## License
+*   **`resources/views/layouts`**: Contains the main `app.blade.php` file, serving as the master HTML skeleton that all other pages extend.
+*   **`resources/views/components`**: Houses all reusable UI pieces like `navbar.blade.php`, `hero.blade.php`, `pricing-card.blade.php`, etc..
+*   **`resources/views/pages`**: Stores the actual page views that assemble the components together.
+*   **`public`**: The public-facing directory where compiled CSS, JavaScript, and image assets are stored.
+*   **`screenshots`**: A dedicated folder to save project images and documentation media.
+*   **`documentation`**: Contains comparison images (before and after) and the main README documentation documenting the evolution of the interface.
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+## 9. Screenshots
+
+Below is the evolution of the interface and the responsive layouts of the mangoroyal.ph landing page:
+
+*   **Before Design (Prototype):** `![Before Design](screenshots/before.png)`
+*   **After Design (Final Interface):** `![After Design](screenshots/after.png)`
+
+**Responsive Layouts:**
+*   **Tablet View:** `![Tablet View](screenshots/tablet.png)`
+*   **Mobile View:** `![Mobile View](screenshots/mobile.png)`
+
+**Landing Page Sections:**
+*   **Navigation Bar:** `![Navigation Bar](screenshots/navbar.png)`
+*   **Hero Section:** `![Hero Section](screenshots/hero.png)`
+*   **Features Section:** `![Features Section](screenshots/features.png)`
+*   **Pricing Cards:** `![Pricing Section](screenshots/pricing.png)`
+*   **Testimonials:** `![Testimonials](screenshots/testimonials.png)`
+*   **Footer:** `![Footer](screenshots/footer.png)`
+
+**Project Architecture:**
+*   **VS Code Project Structure & Blade Components:** `![Structure](screenshots/structure.png)`
+*   **GitHub Repository:** `![GitHub Repository](screenshots/github_repository.png)`
