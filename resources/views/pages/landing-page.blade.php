@@ -149,21 +149,53 @@
         </script>
     </section>
 
-    <!-- 3. Features Section -->
-    <section id="features" class="py-20 bg-white">
+    <!-- 3. About / Features Section -->
+    <section id="features" class="py-24 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Why Choose Mango Royal?</h2>
-                <p class="text-gray-600 max-w-2xl mx-auto">We take pride in delivering the highest quality mango products, ensuring every bite feels like royalty.</p>
+            <div class="text-center mb-20">
+                <span class="text-yellow-600 font-bold uppercase tracking-widest text-sm mb-3 block">Our Royal Standard</span>
+                <h2 class="text-4xl md:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-red-700 to-yellow-500 mb-6 pb-2">Why Choose Mango Royal?</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto font-medium">We take pride in delivering the highest quality mango products, combining traditional farming with world-class standards so every bite feels like royalty.</p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <x-feature-card icon="🚜" title="Farm to Table" description="Sourced directly from the best mango farms in the Philippines." />
-                <x-feature-card icon="🍯" title="100% Pure" description="No artificial sweeteners. Just the pure, natural taste of ripe mangoes." />
-                <x-feature-card icon="✈️" title="Export Quality" description="Carefully sorted and packaged to meet global quality standards." />
-                <x-feature-card icon="♻️" title="Eco-Friendly" description="Our packaging is 100% biodegradable and eco-friendly." />
-                <x-feature-card icon="🚚" title="Fast Delivery" description="Next-day delivery available for Metro Manila orders." />
-                <x-feature-card icon="💪" title="Rich in Vitamins" description="Packed with Vitamin C and immunity-boosting nutrients." />
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                
+                <x-feature-card title="Farm to Table" description="Sourced directly from the best, carefully curated mango farms in the Philippines.">
+                    <x-slot name="icon">
+                        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </x-slot>
+                </x-feature-card>
+
+                <x-feature-card title="100% Pure" description="No artificial sweeteners or preservatives. Just the pure, natural taste of ripe mangoes.">
+                    <x-slot name="icon">
+                        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path></svg>
+                    </x-slot>
+                </x-feature-card>
+
+                <x-feature-card title="Export Quality" description="Carefully sorted, tested, and packaged to consistently meet demanding global quality standards.">
+                    <x-slot name="icon">
+                        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path></svg>
+                    </x-slot>
+                </x-feature-card>
+
+                <x-feature-card title="Eco-Friendly" description="Our business embraces sustainability. All our packaging is 100% biodegradable and earth-conscious.">
+                    <x-slot name="icon">
+                        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path></svg>
+                    </x-slot>
+                </x-feature-card>
+
+                <x-feature-card title="Fast Delivery" description="Reliable and secure next-day delivery available for all our Metro Manila orders.">
+                    <x-slot name="icon">
+                        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 14H5V5h10v9h-3m-4 0a2 2 0 104 0 2 2 0 00-4 0zm8-4h-2M15 7h4l3 3v4h-3m-4 0a2 2 0 104 0 2 2 0 00-4 0z"></path></svg>
+                    </x-slot>
+                </x-feature-card>
+
+                <x-feature-card title="Rich in Vitamins" description="Packed with essential Vitamin C and immunity-boosting nutrients for a healthier you.">
+                    <x-slot name="icon">
+                        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+                    </x-slot>
+                </x-feature-card>
+
             </div>
         </div>
     </section>
